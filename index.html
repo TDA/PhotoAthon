@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Photoathon-for photo freaks!!</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		
+		<link rel="stylesheet" href="supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="supersized.shutter.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="jquery-ui-1.9.2.custom.min.css" type="text/css" media="screen" />
+        
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.easing.min.js"></script>
+		<script type="text/javascript" src="supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="supersized.shutter.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.9.2.custom.min.js"></script>
+        <script>
+		$(document).ready(function(e) {
+        $('#tabs').tabs();    
+        });
+		</script>
+        
+		<style>
+		@font-face {
+    font-family: 'ptserif';
+    src: url('Fonts/ptf56f-webfont.eot');
+    src: url('Fonts/ptf56f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/ptf56f-webfont.woff') format('woff'),
+         url('Fonts/ptf56f-webfont.ttf') format('truetype'),
+         url('Fonts/ptf56f-webfont.svg#pt_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+        #cont{
+			width:80%;
+			margin:60px auto;
+			border-radius:12px;
+			background:rgb(0,0,0);
+			background:rgba(0,0,0,0.6);
+			color:#fff;
+		
+		}
+        h1{
+			color:#F93;
+			font-size:5em;
+			font-family:ptserif,"Times New Roman", Times, serif;
+			text-align:center;
+			text-decoration:underline;
+		}
+		h3{
+			font-size:2.5em;
+			font-family:ptserif,"Times New Roman", Times, serif;
+			margin-top:0.75em;
+		}
+		p{
+			font-style:italic;
+			padding:1em;
+			text-align:justify;
+			width:80%;
+			margin: 0.5em auto;
+			
+		}
+		#tabs li a{//font-family:ptserif,"Times New Roman", Times, serif;
+		font-size:1.2em;
+		}
+		.ui-widget-content{
+			background:rgba(0,0,0,0.5);
+		}
+		footer{
+			border-top:solid 1px rgba(255,255,255,0.5);
+			text-align:center;
+			font-size:1.1em;
+			margin-top:2em;
+			padding:2em;
+			font-family:ptserif;
+		}
+		footer .saic{
+		color:#fff;
+		}
+		.banner{
+			width:80%;
+			display:block;
+			margin: 0 auto;
+			height:auto;
+		}
+		#tabs-4.ui-widget-content{
+			background:url(img/bgcont.png) no-repeat;
+			background-attachment:fixed;
+			background-position:50% 80%;
+			}
+		address{
+			font-size:0.9em;
+			line-height:2;
+		}
+		#tabs-5 address{
+			font-family:Georgia, "Times New Roman", Times, serif;
+			display:inline-block;
+			margin:1em;
+			padding:1em;
+			vertical-align:top;
+			width:220px;
+		}
+		address span{
+			display:inline-block;
+			border-bottom:solid 6px #0CF;
+			width:100%;
+		}
+		figure{
+			width:200px;
+			height:200px;
+			display:inline-block;
+			margin:1em;
+		}
+		figcaption{
+			text-align:center;
+		}
+		figure img{
+			width:100%;
+			height:100%;
+		}
+		@media screen and (max-width:480px){
+			body{font-size:8px !important;}
+			}
+        </style>
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   3000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	1000,		// Speed of transition
+															   
+					// Components							
+					slides 					:  	[			// Slideshow Images
+														{image : 'img/1.jpg', thumb : 'img/1.jpg'},
+														{image : 'img/2.jpg', thumb : 'img/2.jpg'},  
+														{image : 'img/3.jpg', thumb : 'img/3.jpg'},
+														{image : 'img/4.jpg', thumb : 'img/4.jpg'},
+														{image : 'img/6.jpg', thumb : 'img/6.jpg'}
+														]
+					
+				});
+		    });
+		    
+		</script>
+		
+	</head>
+	
+	
+
+<body>
+	<!--Thumbnail Navigation-->
+	<div id="prevthumb"></div>
+	<div id="nextthumb"></div>
+	
+	<!--Arrow Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+	
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+	
+	<!--Time Bar-->
+	<div id="progress-back" class="load-item">
+		<div id="progress-bar"></div>
+	</div>
+	
+	<div id="cont">
+    <!-- the tabs are here-->
+    <img class="banner" src="img/banner.png" alt="Photoathon" title="Photoathon">
+    
+    <div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Home</a></li>
+		<li><a href="#tabs-4">About Us</a></li>
+        <li><a href="#tabs-2">Rules</a></li>
+		<li><a href="#tabs-3">Registration</a></li>
+        <li><a href="#tabs-5">Registration Desks</a></li>
+        <li><a href="#tabs-6">Our Sponsors</a></li>
+	</ul>
+	<div id="tabs-1">
+		<!-- tab 1 content home tab-->
+    	<h3>Photoathon</h3>
+    	<span>A Singaara Chennai Photo War</span>
+        <p>An Online event conducted by AIMS OF YOUTH, only to showcase the beauty of our Singaara Chennai. Calling out to all photofreaks, for a clash of the cameras, and a chance to be judged by a reputed panel of judges consisting of leading cinematographers along with leading Photoheads of chennai. Added to this, we have attractive prizes worth over Rs.1 Lakh to be won, such as a DSLR and exciting camera accessories.
+</p>
+<p>Check out the rules, and pick your cameras, photoathon is coming !!!</p>
+    <br>
+    <h3>Contact details:</h3>
+<address>Srikanth : +91 - 9790760182<br>
+Ajay : +91 - 9600053704<br>
+Land Line : +9144 – 4269 1488<br>
+Address : No 180/210 Bharathi Salai (Opp to Amir Mahal), Royapettah, Chennai – 600014<br>
+Email: photoathon@yahoo.com
+</address>
+	</div>
+	<div id="tabs-2">
+    <!-- rules tab-->
+	
+<h3>Rules & Regulations:</h3>
+<p>
+1.	The contest will be conducted for a span of 3 days.<br>
+2.	Each participant must submit the photo(s) through mail only.<br>
+3.	Each participant can submit a maximum of 2 Photos.<br>
+4.	Photos must be mailed to photoathon@yahoo.com<br>
+5.	EMAIL’s Subject must be <b>&lt;UNIQUE REG ID&gt; space &lt;Your Name&gt;.</b><br>
+6.	Theme for the contest will be <b>“Life in Chennai – Mundane activities but unique to Chennai”</b><br>
+7.	All Participants must provide their details along with the photo.<br>
+8.	The image mailed should be a minimum of 1mb in size and not more than 2mb.<br>
+9.	NO EXTRAVAGANT editing is allowed, Minor color corrections are accepted.<br>
+10.	Photos submitted must be within a span of 3 months.<br>
+11.	Each participant will be given a REG ID at the time of registration in the REG DESK.<br>
+12.	There will be various REG DESKS all over the city where the participant is to Pay and <b>REGISTER ONLY AFTER THEIR ONLINE REGISTRATION.</b><br>
+13.	The REG DESKS will be open for 5 days, starting from FEB 1.<br>
+14.	Each participant with a valid and correct REG ID will only be considered for evaluation.<br>
+15.	All students must provide a valid COLLEGE ID card.<br>
+16.	Registration fees for students will be <b>100rs per head.</b><br>
+17.	Students pursuing any UG and PG degree in any institution can participate in the contest.<br>
+18.	Judging will be done only based on PHOTOGRAPHY and not based on FB LIKES.<br>
+19.	Registration fees will be <b>200rs per head</b> for non-student participants.<br>
+20.	The top 5 Winners will be intimated on the 5th day from the commencement of the contest.<br>
+21.	The best 2 photos will be awarded with exuberant prizes.<br>
+22.	All winners are to submit the original unedited image at the time of prize distribution.<br>
+</p>
+	</div>
+	<div id="tabs-3">
+    <!--registr tab-->
+    <iframe src="https://docs.google.com/forms/d/1tLP1PLFJ26gN0qbotCV1V4RMuN8RHBg-8sDG0fpL0U0/viewform" width="100%" height="1350px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+		
+	</div>
+    
+    <div id="tabs-4"><!--org tab-->
+    <h3><a href="https://www.facebook.com/aimsofyouth">Aims Of Youth Trust &reg;</a></h3>
+    
+    <p>Aims of Youth is an organization started by the students for the students. This unique organization has big potential to perform what others aspire. We take pleasure in introducing ourselves as professionals, and you(th) can expect professionalism in each and every step of ours. Though we lack in experience, we have the habit of learning from others mistakes and correct ourselves. India is on the verge of becoming a developed nation in the near future, and there arises the role of students in shaping up the nation and themselves as well. Join the youth army to make a better India for ourselves and for the future generations. Take pride in shaping up the youth India by contributing to the progress of human capital, probably the best capital a smart entrepreneur can as far. The basic inspiration for us for starting the organization is none other than our former President Prof. APJ Abdul Kalam.</p>
+    <p>The organization’s main idea is to promote education & develop India in 2020 as per president’s dreams. Ambition of our organization is to develop our nation in 2015 i.e. before 2020. We also look forward to walk on the given path 2020 (By Dr. APJ). The basic thought was given by Mr. Nagaraj Sagar K (Founder) after hearing to the inspirational & motivational speeches of Dr. APJ Abdul kalam. Parents can understand & motivate their children’s ideas in a good manner than others likewise; the motivation & encouragement was given to Mr. Nagaraj Sagar K by his Father Mr. Visnu Sagar K. He decided to share his thoughts with his friends & he wanted to have professional students in this organization because of their good thoughts & ideas.</p>
+    <p>The following are the Ambitions of our organization:
+     <h4>Education:</h4><br>
+     1. Granting of scholarships to the deserving students, who comply under our category <br>
+     2. Special grants for the physically challenged students. <br>
+     3. Distribution of free notebooks to the students. <br>
+     4. Study forums, seminars, group discussions, quizzes, extempore, debates and other co- curricular activities. <br>
+     5. Personality enhancement courses. <br>
+     6. Insisting accounts & commerce labs in schools & other institutions. <br>
+     7. Career counseling by experts every month. <br>
+     8. Making the students employable. <br>
+     9. Language Lab for students. <br>
+     10.Youth Excellency award for the members who come out in flying colors after the results. <br>
+     11.Special training for the students in Yoga & Meditation. <br><br>
+     <h4>Others: </h4>
+     1. Free blood bank, medical camps, eye camps and health camps. <br>
+     2. Voluntary services in hospitals, Holy Institutions, etc,. <br>
+     3. Cultural programs to all by staging the budding talents of our members, by giving unique opportunity in fine arts. <br>
+     4. Health Camp in rural areas. <br>
+     5. Campaigns in Traffic rules & regulations & Pollution control. <br>
+     6. Green Revolution.<br>
+     </p>
+
+    </div>
+    
+    <div id="tabs-5">
+    <h3>Registration Desks</h3>
+    The following locations will have registration desks,<br>
+    <address><span>MRC Nagar</span>Chettinad Vidyashram School<br> Thandavarayan St,<br>    MRC Nagar,<br>Chennai<br></address>
+<address><span>Adyar</span>Hot Breads<br> Tamil Illam,<br> 25, Second Main Road,<br> Gandhi Nagar,<br> Adyar,<br> Chennai 600 020</address>
+<address><span>T. Nagar</span> Hot Breads<br> 147, G. N. Chetty Road,<br> T. Nagar,<br> Chennai 600 004</address>
+<address><span>Anna Nagar</span>Creamy Inn<br> AC-139, Shanti Colony Main Rd,<br> Shanthi Colony,<br> Anna Nagar,<br> Chennai,<br> Tamil Nadu 600040</address>
+<address><span>Velachery</span> Angels <br>No. 38/1, 100 Feet Road,<br> Velachery,<br> Chennai - 600042</address>
+<address><span>Perungudi</span> Hi-Style<br> OMR Rajiv Gandhi IT Expy,<br> Shanthi Nagar,<br> Perungudi,<br> Chennai</address>
+<address><span>Royapettah </span>Sathyam Cinemas<br> #8, Thiru-vi-ka Road,<br> Royapettah,<br> Chennai - 600 014</address>
+<address><span>Parrys </span>YES BANK<br> No 3 Dass India Tower Ground Floor,<br> Near Kotak Mahindra Bank,<br> 2nd Line Beach Road Rajaji Salai,<br> Parrys,<br> Chennai - 600001</address>
+<address><span>DLF CITY PORUR</span></address>
+<address><span>TIDEL PARK - THIRUVANMIYUR</span></address>
+<address><span>HCL - SOZHINGANALLUR</span></address>
+    
+    </div>
+    
+    <div id="tabs-6">
+    <h3>Sponsors</h3>
+    <figure>
+    <img src="img/sp1.png">
+    <figcaption>Namma Kadai</figcaption>
+    </figure>
+    <figure>
+    <img src="img/sp2.jpg">
+    <figcaption>VG Infrastructure</figcaption>
+    </figure>
+    
+    </div>
+    
+    
+    
+	</div><!--tabs all-->
+    
+<footer>
+&copy;2014. All rights reserved. Site Created by <a href="http://www.webgyorwaves.com" class="saic">Sai Pc</a>
+</footer>
+</div><!--container-->
+
+</body>
+</html>
